@@ -1,0 +1,12 @@
+diff --git a/React/Fabric/Surface/RCTFabricSurface.mm b/React/Fabric/Surface/RCTFabricSurface.mm
+index 7b3ce5918ce5a159ef364cec030dd1dd00d587bb..3906df778bcd03038c9fd49fb52346cc252f2489 100644
+--- a/React/Fabric/Surface/RCTFabricSurface.mm
++++ b/React/Fabric/Surface/RCTFabricSurface.mm
+@@ -143,6 +143,7 @@ - (RCTSurfaceView *)view
+ 
+   if (!_view) {
+     _view = [[RCTSurfaceView alloc] initWithSurface:(RCTSurface *)self];
++    [self _updateLayoutContext];
+     _touchHandler = [RCTSurfaceTouchHandler new];
+     [_touchHandler attachToView:_view];
+   }
